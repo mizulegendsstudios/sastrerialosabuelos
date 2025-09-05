@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sastrería exclusiva en Panamá especializada en trajes a medida de alta calidad. Confección artesanal con más de 25 años de experiencia.">
+    <meta name="keywords" content="sastrería a medida Panamá, trajes exclusivos Panamá, sastre personal Panamá, trajes elegantes, sastrería artesanal, trajes a medida, sastrería de lujo">
+    <title>Sastrería Exclusiva Panamá | Trajes a Medida y Confección Artesanal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2e5842; /* Verde oscuro elegante */
+            --color-secondary: #b98d6b; /* Madera barnizada */
+            --color-accent: #c19a6b; /* Oro/dorado para acentos */
+            --color-light: #f8f5f2; /* Beige claro */
+            --color-dark: #1a1a1a; /* Casi negro para texto */
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark);
+            background-color: var(--color-secondary);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            width: auto; 
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+        
+        /* Header mejorado */
+        header {
+            background: rgba(46, 88, 66, 0.95);
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        header p {
+            font-style: italic;
+            color: var(--color-accent);
+            font-size: 1.2rem;
+        }
+        
+        /* Menú de navegación responsivo */
+        nav {
+            background: rgba(26, 26, 26, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+        
+        .logo {
+            display: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .menu-toggle {
+            display: block;
+            color: white;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(26, 26, 26, 0.98);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .nav-menu.active {
+            max-height: 300px;
+        }
+        
+        .nav-menu li {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .nav-menu a {
+            color: #fff;
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .nav-menu a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: var(--color-accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1598805296325-aa9be5f83e6e?ixlib=rb-4.0.3') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            background: var(--color-accent);
+            color: var(--color-dark);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: var(--transition);
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #d4af7a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Contenido principal */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            background: rgba(248, 245, 242, 0.95);
+            margin: 2rem 0;
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        section h2 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--color-accent);
+            font-size: 2rem;
+        }
+        
+        section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Galería de servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        .service-img {
+            height: 220px;
+            background-color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-content h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .service-content p {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .service-price {
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: auto;
+        }
+        
+        /* Testimonios */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--color-accent);
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--color-secondary);
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .testimonial-info h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+        
+        /* Galería de trabajos */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            background-color: var(--color-secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 1rem;
+            color: white;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Formulario de contacto */
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(193, 154, 107, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 1.2rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+        
+        .btn-submit:hover {
+            background: #3a7055;
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(26, 26, 26, 0.95);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-info h3,
+        .footer-hours h3,
+        .footer-newsletter h3 {
+            color: var(--color-accent);
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-info p {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-info i {
+            margin-right: 0.8rem;
+            color: var(--color-accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--color-accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-hours p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-newsletter p {
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .newsletter-form button {
+            background: var(--color-accent);
+            color: var(--color-dark);
+            border: none;
+            padding: 0 1.2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-bottom a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+        
+        /* Estilos para tablets y escritorio */
+        @media screen and (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+            
+            .logo {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: static;
+                flex-direction: row;
+                width: auto;
+                max-height: none;
+                background: transparent;
+            }
+            
+            .nav-menu li {
+                border-bottom: none;
+            }
+            
+            .nav-menu a {
+                padding: 1rem 1.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 3.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .contact-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .contact-form .full-width {
+                grid-column: 1 / -1;
+            }
+        }
+        
+        /* Estilos para escritorio grande */
+        @media screen and (min-width: 1024px) {
+            header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            section {
+                padding: 3rem;
+            }
+            
+            .hero {
+                height: 80vh;
+            }
+        }
+        
+        /* Utilidades */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-2 {
+            margin-top: 2rem;
+        }
+        
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+        
+        .section-intro {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            font-weight: 400;
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        /* Modal para imágenes de galería */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 80%;
+            margin-top: 5%;
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="path/to/your/video.webm" type="video/webm">
+        Su navegador no soporta HTML5 video tag.
+    </video>
+    
+    <header>
+        <h1>Sastrería Exclusiva</h1>
+        <p>Arte a Mano en Panamá</p>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sastrería Exclusiva</div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <h2>Elegancia Hecha a su Medida</h2>
+            <p>Descubre la artesanía excepcional y atención personalizada que nos distingue en Panamá</p>
+            <a href="#contact" class="btn">Solicitar una Cita</a>
+        </div>
+    </div>
+    
+    <main>
+        <section id="about">
+            <h2 class="text-center">Acerca de Nosotros</h2>
+            <p class="section-intro">Con más de 25 años de excelencia en sastrería, fusionamos tradición con innovación para crear prendas que reflejan su personalidad y destacan su elegancia.</p>
+            
+            <p>En Sastrería Exclusiva, entendemos que un traje a medida es más que una prenda de vestir: es una extensión de su personalidad, una declaración de estilo y una inversión en confianza. Nuestro maestro sastre, Don Roberto, aprendió el arte de su padre y su abuelo, manteniendo vivas las técnicas ancestrales mientras incorpora innovaciones modernas.</p>
+            
+            <p>Nos enorgullecemos de utilizar solamente las telas más finas, provenientes de los mejores fabricantes de Italia e Inglaterra, y de dedicar entre 40 y 60 horas de trabajo meticuloso a cada prenda. Cada puntada, cada detalle y cada ajuste se realizan con precisión artesanal para garantizar la perfección en el ajuste y la elegancia en el diseño.</p>
+            
+            <div class="cta-container">
+                <a href="#services" class="btn">Descubra Nuestros Servicios</a>
+            </div>
+        </section>
+        
+        <section id="services">
+            <h2 class="text-center">Nuestros Servicios Exclusivos</h2>
+            <p class="section-intro">Ofrecemos una experiencia de sastrería completa, desde trajes completamente personalizados hasta cuidadosos ajustes que revitalizan su guardarropa.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <!-- Imagen de traje a medida -->
+                    </div>
+                    <div class="service-content">
+                        <h3>Trajes a Medida</h3>
+                        <p>Diseñamos y confeccionamos trajes completamente personalizados desde cero. Selección de telas premium, diseño colaborativo y hasta tres ajustes de prueba para garantizar un resultado impecable que se adapte perfectamente a su silueta y estilo de vida.</p>
+                        <p class="service-price">Desde $450</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <!-- Imagen de camisas a medida -->
+                    </div>
+                    <div class="service-content">
+                        <h3>Camisas Personalizadas</h3>
+                        <p>Camisas confeccionadas exactamente a su medida, con amplia selección de telas, cuellos, mangas y puños. Perfectas para uso profesional o ocasiones especiales, con comodidad y estilo incomparables.</p>
+                        <p class="service-price">Desde $120</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <!-- Imagen de ajustes -->
+                    </div>
+                    <div class="service-content">
+                        <h3>Ajustes y Alteraciones</h3>
+                        <p>Servicio profesional de ajustes para modernizar y perfeccionar el ajuste de su ropa existente. Desde simples arreglos hasta transformaciones completas, devolvemos la vida a sus prendas favoritas.</p>
+                        <p class="service-price">Desde $25</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <!-- Imagen de consultoría -->
+                    </div>
+                    <div class="service-content">
+                        <h3>Consultoría de Imagen</h3>
+                        <p>Asesoramiento personalizado para crear un guardarropa coherente que refleje su personalidad y se adapte a sus necesidades. Incluye selección de colores, estilos y recomendaciones para diferentes ocasiones.</p>
+                        <p class="service-price">Desde $100</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="#contact" class="btn">Solicitar Presupuesto Personalizado</a>
+            </div>
+        </section>
+        
+        <section id="gallery">
+            <h2 class="text-center">Nuestro Trabajo</h2>
+            <p class="section-intro">Explore nuestra galería para apreciar la calidad, atención al detalle y elegancia que caracterizan cada creación de Sastrería Exclusiva.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1593030103066-0093718efeb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="gallery-overlay">Traje de negocios azul marino</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1575470522418-b88b692b8084?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="gallery-overlay">Traje formal para bodas</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1506634572416-48cdfe530110?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="gallery-overlay">Ajustes precisos en nuestro taller</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="gallery-overlay">Selección de telas premium</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1598805296325-aa9be5f83e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="gallery-overlay">Traje casual elegante</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="gallery-overlay">Camisas personalizadas</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials">
+            <h2 class="text-center">Lo Que Dicen Nuestros Clientes</h2>
+            <p class="section-intro">La satisfacción de nuestros clientes es el mejor reflejo de nuestro compromiso con la excelencia en cada detalle.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Mi experiencia con Sastrería Exclusiva fue excepcional. Don Roberto me confeccionó un traje para mi boda que recibió elogios de todos los invitados. La atención al detalle y el ajuste perfecto hicieron que me sintiera increíble en un día tan especial."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CM</div>
+                        <div class="testimonial-info">
+                            <h4>Carlos Méndez</h4>
+                            <p>Abogado, Ciudad de Panamá</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Como ejecutivo que viaja constantemente, necesito ropa que se vea profesional pero que también sea cómoda. Los trajes de Sastrería Exclusiva han transformado mi imagen profesional y la comodidad durante largos vuelos es incomparable."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RA</div>
+                        <div class="testimonial-info">
+                            <h4>Ricardo Atencio</h4>
+                            <p>Director Financiero, Panamá</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Llevé a arreglar un traje de mi abuelo que tenía más de 40 años. No solo lograron modernizarlo manteniendo su esencia, sino que ahora luce como nuevo. Es increíble la artesanía y cuidado que ponen en su trabajo."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MG</div>
+                        <div class="testimonial-info">
+                            <h4>María González</h4>
+                            <p>Arquitecta, Panamá</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"He comprado trajes de marcas caras en el pasado, pero ninguno se compara con el ajuste y comodidad de mis trajes hechos a medida por Sastrería Exclusiva. La relación calidad-precio es excelente y el servicio personalizado hace toda la diferencia."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JP</div>
+                        <div class="testimonial-info">
+                            <h4>Javier Pérez</h4>
+                            <p>Empresario, Panamá</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2 class="text-center">Contáctenos</h2>
+            <p class="section-intro">Estamos aquí para responder sus preguntas, escuchar sus ideas y crear la prenda perfecta para usted. Programe una consulta gratuita en nuestro taller.</p>
+            
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo *</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Servicio de interés</label>
+                    <select id="service">
+                        <option value="">Seleccione un servicio</option>
+                        <option value="traje">Traje a medida</option>
+                        <option value="camisa">Camisa personalizada</option>
+                        <option value="ajustes">Ajustes y alteraciones</option>
+                        <option value="consultoria">Consultoría de imagen</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Mensaje *</label>
+                    <textarea id="message" required placeholder="Cuéntenos sobre sus necesidades y preferencias..."></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+                </div>
+            </div>
+            
+            <div class="mt-2">
+                <h3>Información de Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Av. Principal 123, Ciudad de Panamá, Panamá</p>
+                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> +507 123-4567</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@sastreriaexclusiva.com</p>
+                <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Viernes: 9:00 AM - 6:00 PM, Sábados: 10:00 AM - 2:00 PM</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Sastrería Exclusiva</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad de Panamá</p>
+                    <p><i class="fas fa-phone"></i> +507 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sastreriaexclusiva.com</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-hours">
+                    <h3>Horario de Atención</h3>
+                    <p><strong>Lunes - Viernes:</strong> 9:00 AM - 6:00 PM</p>
+                    <p><strong>Sábados:</strong> 10:00 AM - 2:00 PM</p>
+                    <p><strong>Domingos:</strong> Cerrado</p>
+                    <p>Se recomienda programar cita previa</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Manténgase Informado</h3>
+                    <p>Suscríbase a nuestro boletín para recibir novedades, consejos de estilo y promociones exclusivas.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Su correo electrónico" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Sastrería Exclusiva. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para galería de imágenes -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Cambiar ícono
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Cerrar menú al hacer clic en un enlace (móvil)
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Galería de imágenes modal
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.close');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                modal.style.display = "block";
+                modalImg.src = item.style.backgroundImage.slice(5, -2);
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+        
+        // Cerrar modal al hacer clic fuera de la imagen
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+        
+        // Validación básica del formulario
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('¡Gracias por su mensaje! Nos pondremos en contacto con usted pronto.');
+                contactForm.reset();
+            });
+        }
+        
+        // Suscripción al newsletter
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('¡Gracias por suscribirse a nuestro boletín!');
+                newsletterForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
